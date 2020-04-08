@@ -1,0 +1,7 @@
+.cache/
+.bash_history
+data/
+out/
+.ipython/
+.ipynb_checkpoints/
+__pycache__/

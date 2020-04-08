@@ -1,0 +1,56 @@
+---
+version: "3.7"
+services:
+
+  benchmarks:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - opendistro-1.4
+      - opendistro-1.1
+      - opendistro-0.10
+    volumes:
+      - .:/root/
+
+  opendistro-1.4:
+    build:
+      context: .
+      dockerfile: Dockerfile.opendistro.1.4
+    ports:
+      - "9504:9504"
+    environment:
+      - "http.port=9504"
+      - "discovery.type=single-node"
+      - "opendistro_security.disabled=true"
+      - "network.host=0.0.0.0"
+      - "http.host=0.0.0.0"
+      - "transport.host=0.0.0.0"
+
+  opendistro-1.1:
+    build:
+      context: .
+      dockerfile: Dockerfile.opendistro.1.1
+    ports:
+      - "9505:9505"
+    environment:
+      - "http.port=9505"
+      - "discovery.type=single-node"
+      - "opendistro_security.disabled=true"
+      - "network.host=0.0.0.0"
+      - "http.host=0.0.0.0"
+      - "transport.host=0.0.0.0"
+
+  opendistro-0.10:
+    build:
+      context: .
+      dockerfile: Dockerfile.opendistro.0.10
+    ports:
+      - "9506:9506"
+    environment:
+      - "http.port=9506"
+      - "discovery.type=single-node"
+      - "opendistro_security.disabled=true"
+      - "network.host=0.0.0.0"
+      - "http.host=0.0.0.0"
+      - "transport.host=0.0.0.0"

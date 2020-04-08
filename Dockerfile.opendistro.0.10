@@ -1,0 +1,2 @@
+FROM amazon/opendistro-for-elasticsearch:0.10.0
+RUN bin/elasticsearch-plugin install mapper-murmur3

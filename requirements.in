@@ -1,0 +1,8 @@
+ipython
+elasticsearch
+numpy
+plotly
+psutil
+requests
+toolz
+ipdb
