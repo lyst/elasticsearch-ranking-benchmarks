@@ -9,6 +9,10 @@ It's difficult to reliably test absolute performance differences offline.
 These benchmarks are _indicative_ of relative performance between configurations.
 Suggesting directions to explore in a production setting.
 
+These benchmarks run as a single-node cluster on a laptop with no other traffic.
+The shape and relative differences between configurations is more important than the absolute values in the timing measurements.
+The values on the _yaxis_, query + fetch time in milliseconds, gives some idea of the scale.
+
 ## Running benchmarks
 
 ### Run benchmarks for a config

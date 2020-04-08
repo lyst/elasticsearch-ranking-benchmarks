@@ -36,9 +36,8 @@ def benchmark_fig(benchmark_name, title=None, out_dir="out"):
             "title": "search time (ms)",
             "domain": [0.1, 1],
             "range": [0, y_max * 1.1],
-            "showticklabels": False,
         },
-        "width": 960,
+        "width": 914,
         "height": 600,
         "legend_orientation": "h",
     }
